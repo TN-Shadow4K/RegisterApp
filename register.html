@@ -6,11 +6,11 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/style.css">
+    
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -19,16 +19,33 @@
   </header>
   <main>
     <div class="container">
+      <!-- ========== event js ========== -->
+      <form onsubmit="event.preventDefault()";>
         <div class="row">
-        <form>
-            <h4>Register A</h4>
+        <h4 id="titre">Register A</h4>
             <div class="col-6">
-                <input class="form-control nom" type="text" placeholder="Nom" >
-                <button type="submit" class="btn btn-success submit">Register</button>
+                <input class="form-control nom" type="text" placeholder="votre nom" >
+                <span class="error1"></span>
             </div>
-        </form>
+            <div class="col-6">
+              <input class="form-control email" type="email" placeholder="votre email" >
+              <span class="error2"></span>
+          </div>
+          <div class="col-6">
+            <input class="form-control password" type="password" placeholder="votre password" >
+            <span class="error3"></span>
         </div>
+        <div class="col-6">
+          <input class="form-control conPasse" type="password" placeholder="confirmation mot de passe" > 
+          <span class="error4"></span>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-success submit">Register</button>
+            <span class="error4"></span> 
+      </div>
     </div>
+  </form>
+</div>
 
   </main>
   <footer>
@@ -44,5 +61,4 @@
   </script>
   <script src="js/min.js"></script>
 </body>
-
 </html>
